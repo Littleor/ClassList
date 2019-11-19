@@ -1,7 +1,6 @@
 # !/usr/bin/env python
 # -*- coding: UTF-8 -*-
 import urllib2,sys,datetime  # 常用的URL库
-import re  # 正则库
 from bs4 import BeautifulSoup
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -63,7 +62,6 @@ for Classes in WeekList[week]:
     else:
         class_total += Classes['name'] + ' \t' + Classes['place'] + ' \t' + Classes['desc'] + line
         j = j + 1
-
 class_total += '明天共有' + str(j) + '节课,要好好学习哦！' + line
 print class_total.encode("utf8")
 
